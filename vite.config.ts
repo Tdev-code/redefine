@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // base can be overridden by the `BASE_PATH` environment variable
+  // Example for project pages: set BASE_PATH to '/your-repo-name/'
+  base: process.env.BASE_PATH || '/',
   server: {
     host: "::",
     port: 8080,
